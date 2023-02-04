@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Главная</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation"></button>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link
+                {% if request.path == view_teachers %}
+                    active
+                {% endif %}
+                    " aria-current="page" href="{% url 'teachers:view_teachers' %}">Учителя</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,14 @@
+{% extends 'layout/base.html' %}
+{% block titile %}
+   Учитель
+{% endblock titile %}
+{% block content %}
+    <div>
+        <h1> {{ current_teacher.first_name }} {{ current_teacher.second_name }}</h1>
+        <h5>Дата рождения: {{current_teacher.birth_day}}</h5>
+        <h5>Почта: {{current_teacher.email}}</h5>
+        <h5>Номер телефона: {{ current_teacher.phone }}</h5>
+        <h5>Логин: {{ current_teacher.login }}</h5>
+    </div>
+    <a href="{% url 'teachers:view_teachers' %}"><button style="background-color:black; color:white; padding:10px; border-radius:8px; border-color:none;" >Обратно</button></a>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'layout/base.html' %}
+{% block titile %}
+  Все Учителя
+{% endblock titile %}
+{% block content %}
+    <div>
+        <div>
+            {% for i in teachers %}
+                <a href="{{i.get_absolute_url}}" ><h4> {{i.first_name}}  {{ i.second_name }} </h4></a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
